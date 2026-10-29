@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Thư Viện Lớp Học - Phần A</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header>
+    <h1>Thư Viện Lớp Học</h1>
+    <p>Số sách yêu thích: <strong id="fav-count">0</strong></p>
+    <button id="theme-btn">Đổi chế độ Sáng/Tối</button>
+  </header>
+
+  <main>
+    <section>
+      <h2>Thêm sách mới</h2>
+      <form id="book-form" novalidate>
+        <div class="form-group">
+          <input type="text" id="title" placeholder="Tên sách (từ 3 ký tự)">
+          <small class="error" id="err-title"></small>
+        </div>
+        <div class="form-group">
+          <input type="text" id="author" placeholder="Tác giả">
+          <small class="error" id="err-author"></small>
+        </div>
+        <div class="form-group">
+          <select id="genre">
+            <option value="">-- Chọn thể loại --</option>
+            <option value="Công nghệ">Công nghệ</option>
+            <option value="Văn học">Văn học</option>
+            <option value="Kinh tế">Kinh tế</option>
+          </select>
+          <small class="error" id="err-genre"></small>
+        </div>
+        <div class="form-group">
+          <input type="number" id="year" placeholder="Năm xuất bản (1900 - nay)">
+          <small class="error" id="err-year"></small>
+        </div>
+        <button type="submit">Thêm sách</button>
+      </form>
+    </section>
+    <section>
+      <nav class="toolbar">
+        <input type="text" id="search-input" placeholder="Tìm theo tên sách...">
+        <select id="genre-filter">
+          <option value="ALL">Tất cả thể loại</option>
+        </select>
+      </nav>
+
+      <p id="status-line">Đang tải...</p>
+      <div id="book-grid" class="book-grid"></div>
+    </section>
+  </main>
+
+  <footer>
+    <p>Bài tập thực hành 2 - Phần A (Vanilla JS)</p>
+  </footer>
+
+  <script type="module" src="main.js"></script>
+</body>
+</html>
